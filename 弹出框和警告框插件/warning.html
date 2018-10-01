@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>警告框</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+</head>
+<body style="margin: 100px;">
+	<!-- <div class="alert alert-warning fade in">
+		<button class="close" data-dismiss="alert">
+			<span>&times;</span>
+		</button>
+		<p>警告：您的浏览器不支持</p>
+	</div> -->
+
+	<div class="alert alert-warning fade in">
+		<button class="close">
+			<span>&times;</span>
+		</button>
+		<p>警告：您的浏览器不支持</p>
+	</div>
+</body>
+
+<script>
+	$('.close').click(function(){
+		$('.alert').alert('close');
+	});
+	$('.alert').on('close.bs.alert',function(){
+		alert('当close方法触发时调用');
+	});
+</script>
+</html>

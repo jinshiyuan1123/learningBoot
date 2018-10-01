@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>折叠组件</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+</head>
+<body style="margin: 100px;">
+	<button class="btn btn-primary" data-toggle="collapse" data-target="#content">
+		Bootstrap
+	</button>
+	<div class="collapse" id="content">
+		<div class="well">bootstrap是有Twitter公司推出的一个用于前端开发的开源工具包。</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">第一部分链接</a>
+				</h4>
+			</div>
+			<div class="panel-collapse collapse" id="collapseOne">
+				<div class="panel-body">
+					第一部分内容
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">第二部分链接</a>
+				</h4>	
+			</div>
+			<div class="panel-collapse collapse" id="collapseTwo">
+				<div class="panel-body">
+					第二部分内容
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">第三部分链接</a>
+				</h4>	
+			</div>
+			<div class="panel-collapse collapse" id="collapseThree">
+				<div class="panel-body">
+					第三部分内容
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseFour" data-toggle="collapse" data-parent="#accordion">第四部分链接</a>
+				</h4>	
+			</div>
+			<div class="panel-collapse collapse" id="collapseFour">
+				<div class="panel-body">
+					第四部分内容
+				</div>
+			</div>
+		</div>	
+	</div>
+	<br>
+	<br>
+	<br>
+	<script>
+	// $('#content').on('show.bs.collapse',function(){
+	// 	alert('调用show方法时执行');
+	// });
+	</script>
+</body>
+</html>

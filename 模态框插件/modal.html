@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>模态框插件</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body style="margin: 100px;">
+	
+	<!-- 模态框声明 -->
+	<div class="modal fade" id="myModal" tabindex="-1">
+		<!-- 窗口声明 -->
+		<div class="modal-dialog modal-sm">
+			<!-- 内容声明 -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>
+					<h4>会员登录</h4>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4">1</div>
+							<div class="col-md-4">2</div>
+							<div class="col-md-4">3</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default">注册</button>
+					<button class="bn  btn-primary">登录</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">点击弹窗</button> -->
+	<button class="btn btn-primary btn-lg" id="btn">点击弹窗</button>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+		
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			$('#myModal').modal('show');
+		});
+		$('#myModal').modal({
+			show:false,
+		});
+
+		$('#myModal').on('show.bs.modal',function(){
+			alert('当调用show方法时立即触发');
+		});
+
+		$('#myModal').on('shown.bs.modal',function(){
+			alert('当弹窗完全出现再执行');
+		});
+
+		$('#myModal').on('hide.bs.modal',function(){
+			alert('在hide方法立即调用时触发');
+		});
+
+		$('#myModal').on('hidden.bs.modal',function(){
+			alert('模态框关闭后触发');
+		});
+	</script>
+</body>
+</html>

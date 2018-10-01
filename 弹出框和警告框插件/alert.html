@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>alert</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<style>
+		#view{
+			width:300px;
+			height:200px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body style="margin: 200px;">
+
+	<div id="view">
+		<button id="b" class="btn btn-danger btn-lg"
+			data-toggle="popover"
+			title="bootstrap"
+			data-content="Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。  它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。" 
+			data-placement="right">
+	
+		弹出点击	
+	</button>
+	</div>
+	<button id="c">按钮</button>
+	
+
+	<script>
+		$('#b').popover({
+			viewport:{
+				selector:'#view',
+				padding:10,
+			}
+		});	
+		$('#c').click(function(){
+			$('#b').popover('toggle');
+		});
+		$('#b').on('show.bs.popover',function(){
+			alert('弹出时调用');
+		});
+		$('#b').on('hide.bs.popover',function(){
+			alert('隐藏时调用');
+		});
+	</script>
+</body>
+</html>

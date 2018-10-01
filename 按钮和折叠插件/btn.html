@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>按钮组件</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+</head>
+<body style="margin: 100px;">
+	<button class="btn btn-primary" data-toggle="button">按钮</button>
+	<br>
+	<br>
+	<br>
+	<div class="btn-group" data-toggle="buttons">
+		<label for="" class="btn btn-primary active">
+			<input type="radio" name="sex" value="男" checked="checked">男
+		</label>
+		<label for="" class="btn btn-primary">
+			<input type="radio" name="sex" value="女">女
+		</label>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="btn-group" data-toggle="buttons">
+		<label for="" class="btn btn-primary active">
+			<input type="checkbox" name="fa" value="体育" checked="checked">体育
+		</label>
+		<label for="" class="btn btn-primary">
+			<input type="checkbox" name="fa" value="音乐">音乐
+		</label>
+		<label for="" class="btn btn-primary">
+			<input type="checkbox" name="fa" value="艺术">艺术
+		</label>
+		<label for="" class="btn btn-primary">
+			<input type="checkbox" name="fa" value="电脑">电脑
+		</label>
+	</div>
+	<br>
+	<br>
+	<br>
+	<button class="btn btn-primary" data-loading-text="loading...." autocomplete="off" id="btn">开始上传</button>
+	<script>
+	$('#btn').click(function(){
+		var btn =$(this).button('loading');
+		setTimeout(function(){
+			btn.button('reset');
+		},1000);
+	});
+	</script>
+</body>
+</html>
